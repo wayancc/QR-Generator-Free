@@ -1,0 +1,14 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+
+# Dependencies (none required, but just in case)
+node_modules/
+
+# AI assistant files
+.claude/
+CLAUDE.md
