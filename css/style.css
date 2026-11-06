@@ -172,8 +172,12 @@ input[type="range"] { width: 100%; accent-color: var(--ink); }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 880px) {
-  .app { grid-template-columns: 1fr; }
-  .preview { order: -1; }
+  /* Mobile order: Content → QR preview → Design → Output */
+  .app { grid-template-columns: 1fr; gap: 18px; }
+  .editor { display: contents; }
+  .editor > .card:first-child { order: 1; }
+  .preview { order: 2; }
+  .editor > .card:nth-child(n + 2) { order: 3; }
   .preview-sticky { position: static; max-width: 420px; margin: 0 auto; width: 100%; }
   .intro { padding: 32px 0 20px; }
 }
